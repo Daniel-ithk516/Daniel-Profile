@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel YEUNG - Programmer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h2>Daniel YEUNG</h2>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+        <ul id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+<section id="home">
+    <div class="hero-content">
+        <div class="profile-photo">
+            <!-- 換你自己相 URL，例如 ImgBB/Imgur upload -->
+            <img src="/images/daniel.jpg" alt="my photo" loading="lazy">
+        </div>
+        <div class="hero-text">
+            <h1>Hello</h1>
+            <p>我現時在醫院管理局擔任程序編製主任</p>
+            <button onclick="scrollToSection('resume')">Resume</button>
+        </div>
+    </div>
+</section>
+
+<section id="resume">
+    <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        
+        <div class="experience-card" id="exp-1">
+           <h3 class="company-name">Hospital Authority</h3>
+                <div class="job-meta">
+                    <span class="job-title">Programmer</span>
+                    <span class="date">Mar 2024 - Present</span>
+            </div>
+            <ul class="exp-bullets">
+                <li>Handle 25–30 technical support cases per week and consistently resolve issues within agreed timelines.</li>
+                <li>Proactively performed regular regression tests on systems, identifying and preventing potential defects.</li>
+                <li>Conduct comprehensive re‑testing of bug fixes in the QA process to ensure feature integrity.</li>
+                <li>Provide accurate and timely data extracts to hospital teams for clinical workflows.</li>
+                <li>Regularly maintain and update internal web-based support portal using HTML, CSS, and JS.</li>
+            </ul>
+            <div class="scroll-down" onclick="scrollToSection('exp-2')">
+                <span class="arrow">↓</span> Next Experience
+            </div>
+        </div>
+
+<div class="experience-card" id="exp-2">
+            <div class="exp-header">
+                <h3 class="company-name">Uber (Asia) Limited</h3>
+                <div class="job-meta">
+                    <span class="job-title">Intern Team Lead</span>
+                    <span class="date">July 2023 – Nov 2023</span>
+                </div>
+            </div>
+            <ul class="exp-bullets">
+                <li>Report 100+ map discrepancies to the Engineering Team via Jira to fix navigation issues.</li>
+                <li>Led new talent acquisition and recruitment processes for 10 new intern hires.</li>
+                <li>Design and implement training programs for interns to enhance skills and development.</li>
+                <li>Monitor and evaluate team members' performance, providing feedback and guidance.</li>
+            </ul>
+            <div class="scroll-down" onclick="scrollToSection('exp-3')">
+                <span class="arrow">↓</span> Next: Uber (Community Ops)
+            </div>
+        </div>
+
+        <div class="experience-card" id="exp-3">
+            <div class="exp-header">
+                <h3 class="company-name">Uber (Asia) Limited</h3>
+                <div class="job-meta">
+                    <span class="job-title">Community Operations Intern</span>
+                    <span class="date">Nov 2022 – June 2023</span>
+                </div>
+            </div>
+            <ul class="exp-bullets">
+                <li>Conducted daily checks on driving restrictions utilizing Google Maps and MapsDot to identify 500+ map discrepancies.</li>
+                <li>Analyzed data utilizing Querybuilder and Kepler.gl to optimize pickups and dropoffs via ePUDOs in complex urban environments.</li>
+                <li>Designed a prototype to revamp the application with push notifications and in-box messages to boost user engagement.</li>
+            </ul>
+            <div class="scroll-down" onclick="scrollToSection('skills')">
+                <span class="arrow">↓</span> View My Skills
+            </div>
+    </div>
+</section>
+
+    <section id="skills">
+        <div>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="projects">
+                <div class="card">
+                    <h3>Development</h3>
+                    <p>HTML5, CSS3, JavaScript (ES6+), Responsive Design, UI Prototyping</p>
+            </div>
+            <div class="card">
+                <h3>Systems & Data</h3>
+                <p>SQL, VM (Virtualization), VNC Remote Control, Kepler.gl, Data Extraction</p>
+            </div>
+            <div class="card">
+                <h3>Tools & QA</h3>
+                <p>Jira, Regression Testing, Bug Tracking, Technical Support (SLA)</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="projects">
+        <div>
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="card">
+                    <h3>Support Portal Update</h3>
+                    <p>用 HTML/CSS/JS 優化公司 portal，responsive + interactive forms。</p>
+                    <a href="https://your-netlify-link.netlify.app">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div>
+            <h2>Contact Me</h2>
+            <form id="contact-form" name="portfolio-contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="portfolio-contact" />
+            
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your Name" required>
+            
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Your Email" required>
+            
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
