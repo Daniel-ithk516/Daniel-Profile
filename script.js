@@ -50,7 +50,7 @@ const handleContactSubmit = async (e) => {
     };
 
     // 技術展示：在 Console 顯示加密後的傳輸負載 (Base64)
-    // 雖然有 HTTPS 保護，但在開發者視角加入這層意識能加分
+    // 有 HTTPS 保護
     const encodedLog = btoa(unescape(encodeURIComponent(data.message)));
     console.log("Transmission Security Check - Encoded Message:", encodedLog);
 
@@ -64,7 +64,7 @@ const handleContactSubmit = async (e) => {
 
         if (response.ok) {
             // 成功提示
-            alert("✅ 訊息已透過 HTTPS 安全傳送！");
+            alert("✅ 訊息已傳送！");
             form.reset();
         } else {
             throw new Error("傳輸失敗，請稍後再試。");

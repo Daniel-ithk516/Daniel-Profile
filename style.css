@@ -265,6 +265,62 @@ button:hover {
     60% { transform: translateY(-5px); }
 }
 
+#contact form {
+    max-width: 600px; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; 
+    padding: 2rem;
+    background: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+#contact label {
+    font-weight: 600;
+    margin-bottom: -1rem; 
+    color: #803317;
+}
+
+#contact input, 
+#contact textarea {
+    width: 100%; /* 撐滿寬度 */
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contact input:focus, 
+#contact textarea:focus {
+    outline: none;
+    border-color: #04528e;
+    box-shadow: 0 0 0 3px rgba(4, 82, 142, 0.1);
+}
+
+#contact textarea {
+    min-height: 250px; 
+    resize: vertical; 
+}
+
+#contact button {
+    background: #04528e;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact button:hover {
+    background: #6b8bbc;
+}
+
 /* mobile version */
 
 @media (max-width: 768px) {
@@ -287,4 +343,12 @@ button:hover {
     .company-name { font-size: 1.8rem; }
     .job-meta { flex-direction: column; align-items: flex-start; gap: 10px; }
     .job-title { font-size: 1.1rem; }
+    .projects {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+    #contact form {
+        padding: 1rem;
+        width: 100%;
+    }
 }
